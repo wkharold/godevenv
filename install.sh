@@ -24,7 +24,7 @@ git remote add -f scrooloose-nerdtree https://github.com/scrooloose/nerdtree.git
 git subtree add --prefix _vim/bundle/nerdtree scrooloose-nerdtree master --squash
 
 git remote add -f majutsushi-tagbar https://github.com/majutsushi/tagbar.git
-git subtree add --prefix _vim/bundle/majutsushi-tagbar master --squash
+git subtree add --prefix _vim/bundle/tagbar majutsushi-tagbar master --squash
 
 if [ -z "`which gotags`" ]; then
   go get -u github.com/jstemmer/gotags
@@ -34,5 +34,23 @@ git subtree add --prefix supertab https://github.com/ervandew/supertab.git maste
 mkdir -p $PWD/_vim/bundle/supertab/{doc,plugin}
 ln -s $PWD/supertab/doc $PWD/_vim/bundle/supertab/doc
 ln -s $PWD/supertab/doc $PWD/_vim/bundle/supertab/plugin
+
+git remote add -f townk-vim-autoclose https://github.com/Townk/vim-autoclose.git
+git subtree add --prefix _vim/bundle/vim-autoclose townk-vim-autoclose master --squash
+
+git remote add -f scrooloose-syntastic https://github.com/scrooloose/syntastic.git
+git subtree add --prefix _vim/bundle/syntastic scrooloose-syntastic master --squash
+
+git remote add -f tomtom-tlib_vim https://github.com/tomtom/tlib_vim.git
+git subtree add --prefix _vim/bundle/tlib_vim tomtom-tlib_vim master --squash
+
+git remote add -f MarcWeber-vim-addon-mw-utils https://github.com/MarcWeber/vim-addon-mw-utils.git
+git subtree add --prefix _vim/bundle/vim-addon-mw-utils MarcWeber-vim-addon-mw-utils master --squash
+
+git remote add -f garbas-vim-snipmate https://github.com/garbas/vim-snipmate.git
+git subree add --prefix _vim/bundle/vim-snipmate garbas-vim-snipmate master --squash
+
+git remote add -f honza-vim-snippets https://github.com/honza/vim-snippets.git
+git subtree add --prefix _vim/bundle/vim-snippets honza-vim-snippets master --squash
 
 exit 0
