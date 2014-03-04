@@ -48,7 +48,7 @@ git remote add -f MarcWeber-vim-addon-mw-utils https://github.com/MarcWeber/vim-
 git subtree add --prefix _vim/bundle/vim-addon-mw-utils MarcWeber-vim-addon-mw-utils master --squash
 
 git remote add -f garbas-vim-snipmate https://github.com/garbas/vim-snipmate.git
-git subree add --prefix _vim/bundle/vim-snipmate garbas-vim-snipmate master --squash
+git subtree add --prefix _vim/bundle/vim-snipmate garbas-vim-snipmate master --squash
 
 git remote add -f honza-vim-snippets https://github.com/honza/vim-snippets.git
 git subtree add --prefix _vim/bundle/vim-snippets honza-vim-snippets master --squash
