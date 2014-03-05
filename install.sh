@@ -20,7 +20,6 @@ fi
 if ! git ls-remote jnwhiteh-vim-golang > /dev/null 2>&1 ; then
   git remote add -f jnwhiteh-vim-golang https://github.com/jnwhiteh/vim-golang.git
   git subtree add --prefix _vim/bundle/vim-golang jnwhiteh-vim-golang master --squash
-  sed -i 's/g:gofmt_command = "gofmt"/g:gofmt_command = "goimports"/' _vim/bundle/vim-golang/ftplugin/go/fmt.vim
 fi
 
 if ! git ls-remote scrooloose-nerdtree > /dev/null 2>&1 ; then
@@ -73,5 +72,7 @@ if ! git ls-remote honza-vim-snippets > /dev/null 2>&1 ; then
   git remote add -f honza-vim-snippets https://github.com/honza/vim-snippets.git
   git subtree add --prefix _vim/bundle/vim-snippets honza-vim-snippets master --squash
 fi
+
+sed -i 's/g:gofmt_command = "gofmt"/g:gofmt_command = "goimports"/' _vim/bundle/vim-golang/ftplugin/go/fmt.vim
 
 exit 0
