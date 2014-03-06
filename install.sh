@@ -73,6 +73,11 @@ if ! git ls-remote honza-vim-snippets > /dev/null 2>&1 ; then
   git subtree add --prefix _vim/bundle/vim-snippets honza-vim-snippets master --squash
 fi
 
+if ! git ls-remote dgryski-vim-godef > /dev/null 2>&1 ; then
+  git remote add -f dgryski-vim-godef https://github.com/dgryski/vim-godef.git
+  git subtree add --prefix _vim/bundle/vim-godef dgryski-vim-godef master --squash
+fi
+
 sed -i 's/g:gofmt_command = "gofmt"/g:gofmt_command = "goimports"/' _vim/bundle/vim-golang/ftplugin/go/fmt.vim
 
 exit 0
